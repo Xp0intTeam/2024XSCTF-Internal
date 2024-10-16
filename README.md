@@ -1,8 +1,8 @@
-# 202? 年暨南大学&华南师范大学联合 CTF 新生赛
+# 2024 年暨南大学&华南师范大学联合 CTF 新生赛
 
 ![](docs/logo.png)
 
-This is the developing repository for **202? [JNU](https://www.jnu.edu.cn/) × [SCNU](https://www.scnu.edu.cn/) Joint CTF GAME**, where CTF challenges, working schedule and documents will be hosted.
+This is the developing repository for **2024 [JNU](https://www.jnu.edu.cn/) × [SCNU](https://www.scnu.edu.cn/) Joint CTF GAME**, where CTF challenges, working schedule and documents will be hosted.
 
 ***
 
