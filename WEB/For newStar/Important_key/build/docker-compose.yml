@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+     - "40122:5000"
+    volumes:
+     - ./app:/app
+    
