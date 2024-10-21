@@ -6,7 +6,7 @@
 
 难度: 中等  
 
-Exposed port: ```9999```   
+Exposed port: ```8888```   
 
 考点：
 
