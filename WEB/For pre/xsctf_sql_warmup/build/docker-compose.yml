@@ -1,0 +1,8 @@
+version: '2'
+services:
+  web:
+    build: ./
+    restart: always
+    ports: 
+      - "0.0.0.0:8888:80"
+    container_name: sql_warmup
