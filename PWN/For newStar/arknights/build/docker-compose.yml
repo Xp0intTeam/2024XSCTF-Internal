@@ -1,10 +1,10 @@
 version: '3.8'
 
 services:
-    pwn_xxxx:
+    pwn_arknights:
         build: ./
-        image: pwn_xxxx
-        container_name: pwn_xxxx
+        image: pwn_arknights
+        container_name: pwn_arknights
         ports:
             - "8888:8888"
         restart: unless-stopped
