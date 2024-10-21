@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    pwn_c_master:
+        build: ./
+        image: pwn_c_master
+        container_name: pwn_c_master
+        ports:
+            - "8888:8888"
+        restart: unless-stopped
