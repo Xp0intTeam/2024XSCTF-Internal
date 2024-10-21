@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+
+  web:
+    build: .
+    image: chimedal/xsctfsavei1
+    restart: always
+    ports:
+      - "2333:80"
+    environment:
+      - FLAG=XSCTF{Saofe1a_r3a11y_l0ve_xiaomei}
+    command: /run.sh 
