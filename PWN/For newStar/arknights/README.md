@@ -6,7 +6,7 @@
 
 难度: 简单
 
-Exposed port: `9999`
+Exposed port: `8888`
 
 考点：
 
@@ -18,4 +18,4 @@ Exposed port: `9999`
 
 描述: 游戏里抽卡总不爽，试试模拟器吧！诶怎么抽着抽着getshell了？！
 
-flag：动态flag
+flag：XSCTF{two_loaves_of_bread_with_cheese}
