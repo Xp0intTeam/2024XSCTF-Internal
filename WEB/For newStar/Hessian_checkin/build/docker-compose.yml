@@ -1,6 +1,7 @@
 version: "2"
 services:
   hessian_checkin: 
+    container_name: hessian_checkin  # 容器名称
     build:
       context: .  # 使用当前目录中的Dockerfile构建镜像
     ports:
