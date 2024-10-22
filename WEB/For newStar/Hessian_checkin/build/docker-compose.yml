@@ -1,0 +1,7 @@
+version: "2"
+services:
+  hessian_checkin: 
+    build:
+      context: .  # 使用当前目录中的Dockerfile构建镜像
+    ports:
+      - "40066:8888"  # 将容器内部端口8888映射到主机上的端口40066
