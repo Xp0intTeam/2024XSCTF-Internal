@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  backend:
+    container_name: backend
+    restart: always
+    build: ./backend
+    environment:
+      GZCTF_FLAG: "XSCTF{[GUID]}"
+
+  nginx:
+    container_name: nginx
+    restart: always
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
