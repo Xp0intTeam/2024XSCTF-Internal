@@ -7,6 +7,7 @@ nLen = 16
 k = [getPrime(256) for i in range(nLen)]
 
 class LFSR:
+    # 爆裂黎明：立刻在攻击范围内召唤2个魂灵之影；LLL攻击力+180%，攻击时攻击力提升至220%。
     def __init__(self, seed):
         self.seed = []
         for i in range(nLen):
@@ -22,6 +23,7 @@ class LFSR:
 
 flag1 = flag[:nLen]
 flag2 = flag[nLen:]
+# 立刻在攻击范围内召唤2个魂灵之影
 lfsr1 = LFSR(int.from_bytes(flag1,'little'))
 lfsr2 = LFSR(int.from_bytes(flag2,'little'))
 for i in range(nLen):
