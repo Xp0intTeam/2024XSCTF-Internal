@@ -12,7 +12,7 @@ Exposed port: ```8888```
 
 描述: 我是良民！请不要劫持我！
 
-flag：flag{5tack_h1j4ckin9_cha1len6e_0ver}
+flag：XSCTF{5tack_h1j4ckin9_cha1len6e_0ver}
 
 
 
