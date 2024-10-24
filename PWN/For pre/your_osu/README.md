@@ -9,9 +9,8 @@
 Exposed port: ```8888```   
 
 考点：1.ret2csu
-2.orw
 
-描述: 可曾听说过orw和csu的组合机？！
+描述: xswlhhh留下的朴实无华的csu！快来试试吧
 
 flag：XSCTF{5xc1u5ive_t0_you8_c5u}
 
