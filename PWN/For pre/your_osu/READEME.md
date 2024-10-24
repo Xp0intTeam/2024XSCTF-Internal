@@ -8,11 +8,12 @@
 
 Exposed port: ```8888```   
 
-考点：数组溢出
+考点：1.ret2csu
+2.orw
 
 描述: 可曾听说过orw和csu的组合机？！
 
-flag：flag{5xc1u5ive_t0_you8_c5u}
+flag：XSCTF{5xc1u5ive_t0_you8_c5u}
 
 
 
