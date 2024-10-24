@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    pwn_rock_paper_scissors:
+        build: ./
+        image: pwn_rock_paper_scissors
+        container_name: pwn_rock_paper_scissors
+        ports:
+            - "8888:8888"
+        restart: unless-stopped
