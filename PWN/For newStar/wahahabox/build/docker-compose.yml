@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+    pwn_wahahabox:
+        build: ./
+        image: pwn_wahahabox
+        container_name: pwn_wahahabox
+        ports:
+            - "8888:8888"
+        restart: unless-stopped
