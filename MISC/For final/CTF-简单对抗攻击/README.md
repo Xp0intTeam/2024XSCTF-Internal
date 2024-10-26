@@ -9,8 +9,8 @@
 * **考点：**  AI图像对抗攻击
 
 * **描述：**  
-
-预测的模型为
+题目附件下载链接: https://pan.baidu.com/s/16BLmFg54EY2YQi2bPmFQNA 提取码: tha5
+相关描述见附件内README.md
 
 * **flag：** XSCTF{You_R_New_NEW_Give_U_F1Ag_aNd_M1lkTea}
 
