@@ -65,13 +65,15 @@ def upload_file():
         })
     
     s = ssim(np.array(ori_img), np.array(img), multichannel=True, channel_axis=2)
-    s *= 100.
+    s *= 100. # 0~100, 越高越相似
+    mse = float(np.mean( (np.array(ori_img).astype('float32') - np.array(img).astype('float32')) ** 2 ))
     
-    if s < 90:
+    if s < 90 or mse > 1000:
         return jsonify({
             '原始类别（任务目标1：目标类别≠预测类别）': ori_label,
             '预测类别': '传张像点的嘛~, 你这样不给你预测了',
-            'ssim（任务目标2：SSIM>=90）': s
+            'ssim（任务目标2：SSIM>=90）': s,
+            'mse（任务目标3：mse<=1000）': mse,
         })
     
     # Process the image for prediction
@@ -83,7 +85,8 @@ def upload_file():
         return jsonify({
             '原始类别（任务目标1：目标类别≠预测类别）': ori_label,
             '预测类别': top5_class_indices.squeeze().tolist()[0],
-            'ssim（任务目标2：SSIM>=90）': s
+            'ssim（任务目标2：SSIM>=90）': s,
+            'mse（任务目标3：mse<=1000）': mse,
         })
     else:
         return jsonify({
@@ -91,6 +94,7 @@ def upload_file():
             '预测类别': top5_class_indices.squeeze().tolist()[0],
             'ssim（任务目标2：SSIM>=90）': s,
             'msg': "牛的，给你flag：XSCTF{You_R_New_NEW_Give_U_F1Ag_aNd_M1lkTea}",
+            'mse（任务目标3：mse<=1000）': mse,
         })
 
 if __name__ == '__main__':
