@@ -10,7 +10,8 @@
 
 * **描述：**  
 题目附件下载链接: https://pan.baidu.com/s/16BLmFg54EY2YQi2bPmFQNA 提取码: tha5
-相关描述见附件内README.md
+对在ImageNet数据集上预训练的resnet18模型进行对抗攻击，通过给图像添加扰动让分类模型预测错误，同时尽可能保持图片的视觉不变性  
+关于题目更加详细的描述见附件内README.md
 
 * **flag：** XSCTF{You_R_New_NEW_Give_U_F1Ag_aNd_M1lkTea}
 
