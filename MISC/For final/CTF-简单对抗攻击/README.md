@@ -15,5 +15,8 @@
 
 * **flag：** XSCTF{You_R_New_NEW_Give_U_F1Ag_aNd_M1lkTea}
 
-* **Writeup：** （可以直接写在这里 / 单独开一个 Markdown 文档 / 放置 Writeup 链接 / 有空再写）  
-（赛后 Writeup 将统一收集发布到 Leanote 上）
+* **Writeup：**
+运行payload.py生成扰动后的图片，上传即可获得flag
+```python
+python payload.py
+```
