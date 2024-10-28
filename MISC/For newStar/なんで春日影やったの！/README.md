@@ -15,7 +15,7 @@
 
 * **描述：**  在那天演奏完《春日影》之后，长期素食小姐一直试图联系她的好友祥子。她拨通了无数次电话，可每次电话那端传来的，只有她拨号的声音......
 
-* **flag：** flag{HarUh1_kage}
+* **flag：** XSCTF{HarUh1_kage}
 
 * **Writeup：** 
 DTMF2num分析Phone.wav得到key
