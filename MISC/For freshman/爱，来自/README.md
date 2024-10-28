@@ -14,7 +14,7 @@
  
 * **描述：**  你能找到消失的爱吗？
 
-* **flag：** flag{i_10vE_yOu_f0rEvEr}
+* **flag：** XSCTF{i_10vE_yOu_f0rEvEr}
 
 * **Writeup：** 
 
