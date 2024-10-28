@@ -7,9 +7,9 @@ ADD app /app
 COPY flaAag.txt /flaAag.txt
 
 WORKDIR /app
-RUN useradd ctf
-USER ctf
 
 RUN pip3 install -r requirements.txt
+RUN useradd ctf
+USER ctf
 
 CMD ["python3","app.py"]
