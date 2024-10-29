@@ -8,7 +8,7 @@
 2. 简单的aes
 
 - **描述：** 魔法口袋附近有一条跟随小鱼，你知道小鱼去哪了吗？
-- **flag：**XSCTF{n0w_y2u_kn@w_Wh3rE_!s_Th4_Fi9h}
+- **flag：** XSCTF{n0w_y2u_kn@w_Wh3rE_!s_Th4_Fi9h}
 - **Writeup：**
 
 aspack工具脱壳。
