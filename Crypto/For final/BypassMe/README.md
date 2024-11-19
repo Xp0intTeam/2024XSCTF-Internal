@@ -68,4 +68,5 @@ with open("secret.png", 'wb')as f:
     f.write(dec_data)
 p.recvline()
 p.interactive()
-# XSCTF{0582d54a-a311-4327-9d05-6f15c091a0db}```
+# XSCTF{0582d54a-a311-4327-9d05-6f15c091a0db}
+```
