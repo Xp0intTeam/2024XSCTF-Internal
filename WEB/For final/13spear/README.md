@@ -16,7 +16,7 @@
 海纳百川浑然依啄
 各位师傅能接几枪呢？
 
-* flag： XSCTF{Yanz1_i_w1sh_y0u_hApp1neSs}
+* flag： XSCTF{Y0u_ar3_tHe_tru3_PHP_mAst3r}
 
 * Writeup：
 第一关：
@@ -97,7 +97,6 @@ for ($i = 0; $i <= 100; $i++) {
 ```
 flag1=\create_function&flag2=return;}system("calc");//
 ```
-
 
 
 
