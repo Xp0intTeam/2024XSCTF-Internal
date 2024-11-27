@@ -12,7 +12,7 @@ Exposed port: ```8888```
 
 描述: xswlhhh，这并不好笑！
 
-flag：动态flag
+flag：XSCTF{9o0d_5t4ck_h1jack1ng_pwn5r}
 
 
 
