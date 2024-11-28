@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        h1 { color: green; }
+        .best-time { font-size: 20px; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 20px; border: none; border-radius: 4px; background-color: #28a745; color: white; cursor: pointer; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <h1>Congratulations, {{ username }}!</h1>
+    <div class="best-time">Your best time: {{ best_time | round(2) }} seconds</div>
+    
+    <h2>Your Declaration:</h2>
+    <p>{{ declaration }}</p>
+    
+    <form action="/edit_declaration" method="get" style="display:inline;">
+        <input type="hidden" name="username" value="{{ username }}">
+        <button type="submit">Edit Declaration</button>
+    </form>
+    
+    <button onclick="window.location.href='/'">Play Again</button>
+</body>
+</html>

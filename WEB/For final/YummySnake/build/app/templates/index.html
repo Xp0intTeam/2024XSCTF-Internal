@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input { padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 20px; font-size: 16px; border: none; border-radius: 4px; background-color: #28a745; color: white; cursor: pointer; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Snake Game!</h1>
+    <main>
+        <form id="usernameForm" action="/set_username" method="POST">
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <button type="submit">Start Game</button>
+        </form>
+    </main>
+
+    <script src="static/js/index.js"></script>
+</body>
+</html>

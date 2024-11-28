@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Declaration</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        h1 { color: blue; }
+        textarea { width: 80%; height: 100px; margin-top: 10px; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 20px; border: none; border-radius: 4px; background-color: #28a745; color: white; cursor: pointer; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <h1>Edit Your Declaration</h1>
+    <form action="/edit_declaration" method="post" onsubmit="return validateForm()">
+        <input type="hidden" name="username" value="{{ username }}">
+        
+        <!-- Emoji Selection -->
+        <label for="emoji">Choose an emoji:</label>
+        <select name="emoji_selection" id="emoji">
+            <option value="yummy">Yummy 😋</option>
+            <option value="happy">Happy 😊</option>
+            <option value="sad">Sad 😢</option>
+            <option value="love">Love ❤️</option>
+            <option value="thumbs_up">Thumbs Up 👍</option>
+            <option value="party">Party 🎉</option>
+        </select>
+        <br><br>
+
+        <textarea name="declaration" placeholder="Edit your declaration here...">{{ declaration }}</textarea>
+        <br>
+        <button type="submit">Save Declaration</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const declaration = document.querySelector('textarea[name="declaration"]').value.trim();
+            if (!declaration) {
+                alert('Declaration cannot be empty. Please enter a valid declaration.');
+                return false; // 阻止表单提交
+            }
+            return true; // 允许表单提交
+        }
+    </script>
+</body>
+</html>

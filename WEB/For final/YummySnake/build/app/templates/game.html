@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #gameCanvas { border: 1px solid black; margin: 20px auto; display: block; }
+        #score { font-size: 20px; margin: 10px; }
+        #controls { font-size: 16px; margin: 20px; }
+        #gameOver { display: none; font-size: 24px; color: red; }
+        button { padding: 10px 20px; font-size: 16px; border: none; border-radius: 4px; background-color: #28a745; color: white; cursor: pointer; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="score">Score: 0</div>
+    <div id="controls">Use arrow keys to move the snake. <b>Get at least 18 points to win!!</b></div>
+    <div id="gameOver">Game Over! <button id="restartButton">Restart</button></div>
+    
+    <script src="static/js/game.js"></script>
+    <script>
+        document.getElementById('restartButton').addEventListener('click', function() {
+            // 重新开始游戏的逻辑
+            location.reload(); // 简单的重新加载页面
+        });
+    </script>
+</body>
+</html>
