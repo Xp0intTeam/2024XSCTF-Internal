@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+    pwn_chusai-shellcode:
+        build: ./
+        image: pwn_chusai-shellcode
+        container_name: pwn_chusai-shellcode
+        ports:
+            - "40071:42021"
+        restart: unless-stopped
+        volumes:
+            - /dev/null:/home/ctf/dev/null
+            - /dev/zero:/home/ctf/dev/zero
+            - /dev/random:/home/ctf/dev/random
+            - /dev/urandom:/home/ctf/dev/urandom
